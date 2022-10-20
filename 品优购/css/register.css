@@ -1,0 +1,107 @@
+.register_logo {
+    height: 82px;
+    line-height: 82px;
+    border-bottom: 2px solid #b1191a;
+}
+.register {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.register_hd {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px; 
+    font-size: 18px;
+    color: #333333;
+    background-color: #ececec;
+}
+
+.toRegister {
+    font-size: 14px;
+    color: #767676;
+    display: block;
+    float: right;
+}
+.register_bd {
+    width: 600px;
+    margin: 50px auto 0;
+}
+.register_bd ul li {
+    height: 37px;
+    line-height: 37px;
+    margin-bottom: 20px;
+}
+.register_bd ul li label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    margin-right: 10px;
+}
+.register_bd ul li i {
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    background: url(../images/error.png) no-repeat;
+}
+.register_bd ul li:nth-child(2) i {
+    background: url(../images/success.png) no-repeat;
+}
+.register_bd ul li .inp{
+    width: 240px;
+    height: 36px;
+    border: 1px solid #999999;
+}
+.icon_error,
+.icon_success {
+    margin: 0 10px;
+}
+.safe {
+    padding-left: 170px;
+}
+.safe em {
+    padding: 0 12px;
+    color: #fff;
+}
+.ruo {
+    background-color: #de1111;
+}
+.zhong {
+    background-color: #40b83f;
+}
+
+.qiang {
+    background-color: #f79100;
+}
+.agree {
+    padding-left: 95px;
+}
+.agree input {
+    vertical-align: middle;
+}
+.agree a {
+    color: #1ba1e6;
+}
+.btn {
+    width: 200px;
+    height: 34px;
+    background-color: #c81623;
+    font-size: 14px;
+    color: #fff;
+    margin: 10px 0 0 115px;
+}
+
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+.links {
+    margin-bottom: 15px;
+}
+.links a {
+    margin: 0 3px;
+}
+.copyright {
+    line-height: 20px;
+}

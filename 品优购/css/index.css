@@ -1,0 +1,317 @@
+/* 首页主要部分 */
+.main {
+    width: 980px;
+    height: 467px;
+    margin-top: 12px;
+    margin-left: 220px;
+}
+.focus {
+    position: relative;
+    width: 721px;
+    height: 467px;
+    float: left;
+}
+.arrow-l,
+.arrow-r {
+	position: absolute;
+	top: 50%;
+	width: 30px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.3);
+	transform: translateY(-50%);
+	text-align: center;
+	line-height: 60px;
+	font-size: 20px;
+	color: rgba(255, 255, 255, .6);
+	font-family: arial;
+	font-weight: normal;
+}
+.arrow-r {
+	right: 0;
+}
+.circle {
+	width: 178px;
+	height: 20px;
+	background: rgba(255, 255, 255, .3);
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	padding-left: 8px;
+}
+.circle li {
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border-radius: 50%;
+	float: left;
+	margin: 4px;
+	cursor: pointer;  /* 鼠标经过li 的时候变成小手 */
+}
+.circle .current {
+	background-color: #f10215;
+}
+.new {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+.flashnew {
+    height: 165px;
+    border: 1px solid #ccc;
+}
+.flashnew .flash-h {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #ccc;
+}
+.flashnew .flash-h h5 {
+    font-size: 14px;
+    color: #333333;
+    float: left;
+    font-weight: 700;
+    padding-left: 15px;
+}
+.flashnew .flash-h .more span {
+    padding: 0px 16px 0 8px;
+}
+.flashnew .flash-b {
+    color: #666666;
+    font-size: 14px;
+    padding: 5px 15px 0;
+}
+.flashnew .flash-b li {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.flashnew .flash-b span {
+    font-weight: 700;
+    padding-right: 6px;
+}
+.new .flash-f{
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #ccc;
+    border-top: 0;
+}
+.new .flash-f ul {
+    width: 252px;
+}
+.new .flash-f ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+}
+.new .flash-f ul li i {
+    display: inline-block;
+    text-align: center;
+    width: 24px;
+    height: 28px;
+    margin-top: 12px;
+    background: url(../images/icons.png) no-repeat -19px -15px;
+}
+.new .flash-ad {
+    margin-top: 5px;
+}
+
+
+/* 推荐部分 */
+.recom {
+    height: 163px;
+    background-color: #ebebeb;
+    margin-top: 12px;
+}
+.recom_hd {
+    float: left;
+    height: 163px;
+    width: 205px;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+}
+.recom_bd {
+    float: left;
+}
+ .recom_bd li{
+    float: left;
+    position: relative;
+}
+.recom_bd  ul li img {
+    height: 160px;
+    width: 248px;
+}
+
+.recom_bd ul li:nth-child(-n+3)::after {
+    content: "";
+    width: 1px;
+    height: 145px;
+    background-color: #ccc;
+    right: 0;
+    top: 10px;
+    position: absolute;
+}
+
+/* 猜你喜欢部分 */
+.love {
+    height: 260px;
+    margin-top: 20px;
+}
+.love .love_hd {
+    height: 40px;
+    line-height: 40px;
+}
+.title {
+    font-size: 18px;
+    color: #7d7d7d;
+    font-weight: 700;
+}
+.love .love_hd .change {
+    font-size: 12px;
+    color: #666666;
+}
+.love .love_hd .change::after {
+    content: '\ea2e';
+    font-family: 'icomoon';
+    margin: 0 20px  0 10px;
+}
+.love .love_bd {
+    height: 233px;
+    border: 1px solid #ededed;
+}
+.love .love_bd ul li {
+    position: relative;
+    float: left;
+}
+.love_bd ul li:nth-child(-n+5)::after {
+    content: "";
+    width: 1px;
+    height: 60px;
+    top: 160px;
+    bottom: 10px;
+    right: 0;
+    position: absolute;
+    background-color: #ededed;
+}
+
+/* 传智趣客 */
+.fun {
+    height: 442px;
+    margin-top: 30px;
+}
+.fun .fun_hd {
+    height: 37px;
+    line-height: 27px;
+    line-height: 37px;
+}
+.fun .fun_bd {
+    height: 407px;  
+}
+.fun_bd ul li {
+    float: left;
+}
+
+/* 家用电器部分 */
+.box_hd {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    border-bottom: 2px solid #c81623;
+}
+.box_hd h5 {
+    font-size: 18px;
+    color: #c81623;
+    float: left;
+}
+.box_hd .tab_list li {
+    float: right;
+    position: relative;
+}
+
+.box_hd .tab_list li:nth-child(even) {
+    width: 1px;
+    height: 12px;
+    background-color: #ccc;
+    margin: 15px 10px;
+}
+.box_bd {
+    height: 360px;
+}
+.tab_list_item>div {
+    float: left;
+    height: 360px;
+}
+.col_210 {
+    width: 210px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.col_210 ul {
+    padding-left: 12px;
+}
+.col_210 ul li {
+    height: 32px;
+    line-height: 32px;
+    width: 87px;
+    text-align: center;
+    margin-right: 10px;
+    border-bottom: 1px solid #ccc;
+    float: left;
+}
+.col_329 {
+    width: 329px;
+    position: relative;
+}
+.circle2 {
+    width: 60px;
+    height: 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+.circle2 li:first-child {
+    background-color: #fff;
+}
+.circle2 li {
+    float: left; 
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background-color: #3e3e3e;
+}
+.col_221 {
+    width: 221px;
+}
+.col_219 {
+    width: 219px;
+}
+
+/* 品牌部分 */
+.brand {
+    height: 66px;
+    margin-top: 20px;
+    position: relative;
+}
+.brand ul li {
+    float: left;
+    
+}
+.brand ul li:nth-child(-n+9):after {
+    content: '';
+    width: 1px;
+    height: 40px;
+    position: absolute;
+    top: 14px;
+    bottom: 14px;
+    background-color: #ccc;
+}

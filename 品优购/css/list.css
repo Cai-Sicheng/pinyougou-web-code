@@ -1,0 +1,138 @@
+/* 列表页专属页面 */
+.nav {
+    overflow: hidden;
+}
+.sk {
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    padding-left: 14px;
+    border-left: 1px solid #c81523;
+}
+.sk_tab {
+    float: left;
+    line-height: 47px;
+}
+
+.sk_tab ul li {
+    float: left;
+}
+.sk_tab ul li a {
+    display: block;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 700;
+    padding: 0 30px;
+}
+.sk_content {
+    float: left;
+}
+.sk_content ul li {
+    float: left;
+}
+.sk_content ul li a {
+    font-size: 14px;
+    display: block;
+    padding: 0 23px;
+    line-height: 49px;
+}
+.sk_content ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+    font-size: 16px;
+}
+.sk_bd {
+    margin-bottom: 30px;
+    /* position: relative; */
+}
+.sk_bd ul li {
+    width: 290px;
+    height: 460px;
+    overflow: hidden;
+    float: left;
+    margin-right: 13px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+}
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+.sk_bd  ul li:hover {
+    border: 1px solid #c81523;
+    border-bottom: none;
+}
+.sk_bd .tab_content {
+    padding: 0 10px;
+}
+.sk_bd .tab_content p {
+    font-size: 14px;
+    color: #747474;
+}
+.sk_bd .tab_content strong {
+    font-size: 22px;
+    padding-right: 8px;
+}
+.sk_bd .tab_content span {
+    color: #747474;
+    font-size: 14px;
+}
+.sk_bd .tab_content .progress {
+    height: 42px;
+    line-height: 42px;
+}
+progress {
+    width: 132px;
+    height: 12px;
+    border-radius: 10px;
+    border: 1px solid #c81523;
+    background-color: #ed282e;
+}
+/* 进度条兼容性 */
+progress::-webkit-progress-bar{
+    border-radius: 10px;
+    background-color:#ffffff;
+}
+progress::-webkit-progress-value {
+    border-radius: 10px 0 0 10px;
+    background-color:#c81523;
+}
+.sk_bd button {
+    width: 290px;
+    height: 50px;
+    color: #ffffff;
+    background-color: #c81523;
+}
+
+/* 固定侧边栏 */
+.slider-bar {
+    position: absolute;
+    right: 30px;
+    display: none;
+    background-color: #c81523;
+}
+.goback {
+    font-size: 20px;
+    color: #ffffff;
+    position: relative;
+    border-bottom: 1px solid #ffffff;
+}
+.goback i {
+    position: absolute;
+    /* content: "\e921"; */
+    font-family: "icomoon";
+    top: -20px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.goback,
+.icon {
+    display: block;
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    text-align: center;
+}
+.slider-bar .icon {
+    line-height: 68px;
+    background: url(../images/icons.png) no-repeat 0 0 ;
+}

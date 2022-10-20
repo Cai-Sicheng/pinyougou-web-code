@@ -1,0 +1,175 @@
+.logo {
+    height: 82px;
+    padding-top: 20px;
+}
+.login {
+    height: 503px;
+    background-color: #7f00ff;
+    
+}
+.login_bd {
+    position: relative;
+
+}
+.login_r img{
+    height: 440px;
+    width: 690px;
+    margin-right: 100px;
+}
+
+.loginForm {
+    width: 380px;
+    height: 364px;
+    background-color: #fff;
+    position: absolute;
+    right: 115px;
+    top: 80px;
+    padding: 0 37px;
+}
+.loginForm h3 {
+    font-size: 18px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: normal;
+}
+.loginForm h3 a {
+    display: block;
+    width: 150px;
+}
+.loginForm h3 a:first-child {
+    padding-left: 9px;
+   float: left;
+}
+.loginForm h3 span {
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
+}
+
+
+.loginForm h3 a:last-child {
+    padding-right: 12px;
+    float: right;
+    text-align: right;
+}
+.ScanForm {
+    text-align: center;
+    display: none;
+}
+.ScanForm img {
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+}
+.AccountContent {
+    display: block;
+}
+.AccountContent,
+.ScanForm {
+    width: 302px;
+    height: 217px;
+}
+.AccountContent ul li {
+    width: 302px;
+    height: 37px;
+    line-height: 37px;
+    margin-bottom: 17px;
+    position: relative;
+}
+.AccountContent ul li .inp{
+    height: 36px;
+    width: 302px;
+   border: 1px solid #ccc;
+}
+.AccountContent .attention {
+    background-color: #fffdee;
+    border: 1px solid #f5eecf;
+    width: 302px;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 9px;
+    margin-bottom: 10px;
+}
+.AccountContent ul li label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background-color: blue;
+    background: url(../images/images/login_user.png) ;
+}
+.AccountContent ul li:last-child label {
+    background: url(../images/images/login_password.png);
+}
+
+.Auto {
+    width: 302px;
+    height: 37px;
+}
+.Auto input {
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+    margin-right: 7px;
+    float: left;
+}
+
+.Auto em {
+    color: #b3b3b3;
+    display: block;
+    float: left;
+}
+.Auto a {
+    color: #333333;
+    display: block;
+    float: right;
+}
+.loginForm button {
+    width: 302px;
+    height: 41px;
+    letter-spacing: 5px;
+    color: #f5dedf;
+    font-size: 16px;
+    background-color: #c81623;
+}
+.login_fd {
+    margin-top: 32px;
+    width: 302px;
+    background-color: pink;
+}
+.login_fd li {
+    padding-right: 20px;
+    float: left;
+}
+.login_fd li a{
+    display: block;
+    width: 32px;
+    height: 32px;    
+}
+/* .login_fd li:last-child {
+    float: right;
+} */
+.login_fd .register {
+    display: block;
+    float: right;
+    height: 32px;
+    color: #1474af;
+    font-size: 14px;
+    line-height: 32px;
+    padding-right: 10px;
+}
+.qq {
+    background: url(../images/images/login_icon_12.png);
+}
+.weibo {
+    background: url(../images/images/login_icon_14.png);
+}
+.zhifubao {
+    background: url(../images/images/login_icon_16.png);
+}
+.weixin {
+    background: url(../images/images/login_icon_18.png);
+}
+

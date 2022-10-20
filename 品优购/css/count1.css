@@ -1,0 +1,307 @@
+
+.logo-title {
+    position: absolute;
+    left: 198px;
+    top: 35px;
+    font-size: 19px;
+}
+header {
+    position: relative;
+}
+.count_search {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    height: 37px;
+    width: 539px;
+    border: 2px solid #b1191a;
+    background-color: pink;
+}
+.count_search input {
+    padding-left: 12px;
+    float: left;
+    font-size: 14px;
+    height: 33px;
+    width: 455px;
+}
+.count_search button {
+    float: left;
+    width: 80px;
+    height: 33px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #b1191a;
+}
+.product table {
+    text-align: left;
+    width: 1200px;
+    border-collapse:collapse;
+}
+.product_title {
+    height: 36px;
+    /* line-height: 36px; */
+    background-color: #f5f5f5;
+}
+.first {
+    width: 40px;
+}
+.all {
+    width: 25px;
+}
+.products {
+    text-align: center;
+    width: 500px;
+}
+.price {
+    width: 230px;
+    text-align: center;
+}
+.number {
+    width: 105px;
+    text-align: center;
+}
+.little {
+    width: 186px;
+    text-align: center;
+}
+.pratice {
+    width: 170px;
+    text-align: center;
+}
+.product table tr {
+    border:1px solid #ccc;
+    border-right: 0;
+    border-left: 0;
+
+}
+.check {
+   margin: 0 12px 0 4px;
+  vertical-align: middle;
+}
+.self {
+    /* padding-top: 20px; */
+    height: 45px;
+    position: relative;
+    /* border: 1px solid #ccc; */
+}
+.self td:nth-child(2) {
+    position: absolute;
+    bottom: 10px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    width: 54px;
+    height: 20px;
+    background-color: #b1191a;
+}
+.change {
+    height: 20px;
+}
+.product_list td img{
+float: left;
+ width: 79px;
+ height: 81px;
+}
+.intruduct {
+    width: 400px;
+    margin-left: 20px;
+    text-align: left;
+    float: left;
+}
+.intruduct i {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-color: pink;
+    background: url(../images/images/count_present_06.png)no-repeat;
+}
+td {
+    text-align: center;
+}
+.choose_amount {
+    position: relative;
+    width: 98px;
+    height: 30px;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    /* background-color: pink; */
+    border: 1px solid #ccc;
+}
+.choose_amount input {
+    width: 30px;
+    height: 20px;
+	text-align: center;
+    /* background-color: pink; */
+}
+.choose_amount .add, 
+.choose_amount .reduce {
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-left: 0;
+    text-align: center;
+    line-height: 22px;
+}
+.choose_amount .add {
+    border-right: 1px solid #ccc;
+	top: 0;
+    left: 0;	
+}
+
+.choose_amount .reduce {
+    border-left: 1px solid #ccc;
+	bottom: 0;
+    color: #b1191a;
+	/*禁止鼠标样式*/
+	cursor: not-allowed;   /* pointer  小手  move  移动  */
+}
+.product_c {
+    height: 100px;
+}
+
+.buy {
+    display: inline-block;
+    height: 20px;
+    width: 46px;
+    color: #fff;
+    margin-right: 30px;
+    background-color: #b1191a;
+}
+.look {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    color: #fff;
+    margin-left: 20px;
+    background-color: #b1191a;
+}
+.product_con img {
+    margin-left: 18px;
+}
+.product_c .product_con {
+    height: 146px;
+    margin: 20px 0 0 18px;
+}
+.product_hd {
+    margin-top: 10px;
+}
+.gift {
+    width: 252px;
+    height: 50px;
+    margin-top: 30px;
+}
+.gift li a{
+    display: block;
+    height: 28px;
+    width: 252px;
+    float: left;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.shenzhou {
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+}
+.shenzhou td:last-child {
+    position: absolute;
+    left: 50px;
+    font-size: 16px;
+}
+.delete {
+    height: 52px;
+}
+.delete td:nth-child(3) ul{
+    height: 52px;
+    line-height: 52px;
+}
+.delete td:nth-child(3) li {
+    padding-left: 6px;
+    float: left;
+}
+.delete td:nth-child(3) li a {
+    display: block;
+    padding: 0 6px;
+}
+.delete td:nth-child(4) button {
+    height: 52px;
+    width: 109px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #b1191a;
+}
+.guess {
+    margin-bottom: 20px;
+}
+.guess_list {
+    height: 45px;
+    line-height: 45px;
+    margin-top: 40px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.guess_list li{
+    width: 87px;
+    font-size: 14px;
+    float: left;
+    text-align: center;
+}
+.guess_list .current {
+    width: 87px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background-color: #b1191a;
+}
+
+.guess-con {
+    position: relative;
+    height: 350px;
+    line-height: 350px;
+    padding: 20px 0 0 45px;
+}
+.guess-con ul {
+    width: 992px;
+    height: 330px;
+    border: 1px dotted #ccc;
+}
+.guess-con ul li {
+    width: 246px;
+    height: 330px;
+    float: left;
+}
+.guess-con ul li:nth-child(n-3) {
+    border-right: 1px dotted #ccc;
+}
+.guess-con ul li:nth-child(4) {
+    border-right: 0;
+}
+.arrow-l,
+.arrow-r {
+    /* display: block; */
+	position: absolute;
+	top: 50%;
+	width: 30px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.3);
+	transform: translateY(-50%);
+	text-align: center;
+	line-height: 60px;
+	font-size: 20px;
+	color: rgba(255, 255, 255, .6);
+	font-family: arial;
+	font-weight: normal;
+}
+.arrow-l {
+	left: 0;
+}
+.arrow-r {
+	right: 0;
+}
