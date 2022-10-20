@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>待会员页面</title>
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="../css/25.css"> -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    body {
+
+        background-image: url("images/bg1.png");
+
+        background-position: center 0;
+
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+
+        background-size: cover;
+
+        -webkit-background-size: cover;
+
+        -o-background-size: cover;
+
+        -moz-background-size: cover;
+
+        -ms-background-size: cover;
+
+    }
+
+    * {
+        /* 初始化 取消内外边距 */
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        /* 溢出隐藏 */
+        overflow: hidden;
+    }
+
+    .navbar {
+        /* 相对定位 */
+        position: relative;
+        /* 100%窗口宽度 */
+        width: 100vw;
+        display: flex;
+        padding: 0;
+    }
+
+    .main {
+        flex: 1;
+        height: calc(100vh - 43px);
+        position: relative;
+        top: 43px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    #checkbox {
+        display: none;
+    }
+
+    .navbar label {
+        position: absolute;
+        top: 0;
+        left: 70px;
+        width: 100%;
+        height: 43px;
+        font-size: 30px;
+        color: #5a738e;
+        background-color: #ededed;
+        padding-left: 20px;
+        border: 1px solid #d9dee4;
+        cursor: pointer;
+        /* 加个动画过渡 */
+        transition: all 0.5s;
+    }
+
+    .navbar .nav_list {
+        list-style: none;
+        width: 70px;
+        /* 100%窗口高度 */
+        height: 100vh;
+        background-color: #2a3f54;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+
+    .navbar .nav_list li {
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    .navbar .nav_list li:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .navbar .nav_list li:first-child img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .navbar .nav_list li:first-child span {
+        /* 先把文字隐藏起来 */
+        display: none;
+        color: #fff;
+        /* 文字禁止换行 */
+        white-space: nowrap;
+        padding-left: 10px;
+    }
+
+    .navbar .nav_list li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 垂直排列 */
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        color: #d1d1d1;
+        text-decoration: none;
+    }
+
+    .navbar.nav_list li a i {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .navbar .nav_list li a span {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .navbar ul li a:hover {
+        color: #fff;
+        background-color: #35495d;
+    }
+
+    /* :checked选择器是判断复选框是否被选中 */
+    /* +是相邻兄弟选择器，找到input的下一个兄弟label */
+    .navbar input:checked+label {
+        left: 200px;
+    }
+
+    /* ~也是兄弟选择器，但它可以找到隔了几代的兄弟 */
+    .navbar input:checked~.nav_list {
+        width: 200px;
+    }
+
+    .navbar input:checked~.nav_list li:first-child {
+        /* 将居中改为开头对齐 */
+        justify-content: flex-start;
+    }
+
+    .navbar input:checked~.nav_list li:first-child span {
+        /* 文字显示 */
+        display: block;
+    }
+
+    .navbar input:checked~.nav_list li a {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .navbar input:checked~.nav_list li a i {
+        font-size: 18px;
+        margin: 0 15px 0 30px;
+    }
+
+    .navbar input:checked~.nav_list li a span {
+        font-size: 14px;
+    }
+
+    /* 显示申请会议列表页面 */
+    /* .apply {
+        display: block;
+    } */
+
+    .item {
+        display: none;
+    }
+
+    .signIn {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="navblist">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <ul class="nav_list">
+                <li class="participants">
+                    <img src="images/image.png" alt="">
+                    <span>欢迎您！待会员</span>
+                </li>
+                <li class="applyMeeting">
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>会议申请</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-sitemap" aria-hidden="true"></i>
+                        <span>开始会议</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span>会议签到</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        <span>结束会议</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-th-large" aria-hidden="true"></i>
+                        <span>会议统计</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="item"></div>
+            
+            <!-- 1会议申请开始 -->
+            <div class="apply col-6 item" style="display: block;">
+                    <h4 class="text-center mb-3 text-white">会议申请信息列表</h4>
+                    <!-- <caption class="text-center text-white mb-3">会议申请信息列表</caption> -->
+                    <form method="post">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">会议ID</span>
+                            <input type="text" class="form-control" name="id" th:value="${user} == null?'':${user.id}">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">会议名称</span>
+                            <input type="text" class="form-control" name="name"
+                                th:value="${user}==null?'':${user.name}">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">开始时间</span>
+                            <input type="text" class="form-control" name="startTime"
+                                th:value="${user}==null?'':${user.gender}">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">结束时间</span>
+                            <input type="text" class="form-control" name="endTime"
+                                th:value="${user}==null?'':${user.gender}">
+                        </div>                       
+                        <div class="input-group mb-3">
+                            <input type="submit" class="form-control btn btn-success" value="提交">
+                        </div>
+                    </form>
+            </div>
+            <!-- 会议申请结束 -->
+
+             <!-- 2开始会议 -->
+             <div class="begin item text-center text-white mt-7 col-7">
+                <h1>会议已开始</h1>
+            </div>
+            <!-- 开始会议结束 -->
+          
+            <!-- 3会议签到开始 -->
+            <div class="signIn col-8 text-center mt-7 item">
+                <table class="table table-success table-striped table-bordered text-center" id="table">
+                    <h4 class="text-center text-white mb-3">会议签到列表</h4>
+                    <!-- <caption class="text-center text-white mb-3">会议签到列表</caption> -->
+                    <thead>
+                        <tr>
+                            <th scope="col text-md-center">ID</th>
+                            <th scope="col text-center">姓名</th>
+                            <th scope="col text-center">签到时间</th>
+                            <th scope="col text-center">签到状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2001</td>
+                            <td>张三</td>
+                            <td>2021-11-01-12：00</td>
+                            <td>已签到</td>
+                        </tr>
+                        <tr>
+                            <td>2001</td>
+                            <td>张三</td>
+                            <td>2021-11-01-12：00</td>
+                            <td>已签到</td>
+                        </tr>
+                        <tr>
+                            <td>2001</td>
+                            <td>张三</td>
+                            <td>2021-11-01-12：00</td>
+                            <td>已签到</td>
+                        </tr>
+                        <tr>
+                            <td>2001</td>
+                            <td>张三</td>
+                            <td>2021-11-01-12：00</td>
+                            <td>已签到</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example ">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- 会议签到结束 -->
+           
+            <!-- 4结束会议B -->
+            <div class="item text-center text-white mt-7 col-7 ">
+                <h1>会议已结束</h1>
+            </div>
+            <!-- 结束会议E -->
+
+            <!--  5会议统计开始-->
+            <div class="anlysisMeeting text-center item col-6">
+                <table class="table table-success table-striped table-bordered">
+                    <h4 class="text-center text-white mb-3 vertical-align">用户签到统计</h4>
+                    <!-- <caption class="text-center text-white mb-3 ">用户签到统计</caption> -->
+                    <thead>
+                        <tr>
+                            <th scope="col text-md-center">未签到</th>
+                            <th scope="col text-center">人脸签到</th>
+                            <th scope="col text-center">人工签到</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20</td>
+                            <td>40</td>
+                            <td>6</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            <!--  会议统计结束-->
+        </div>
+    </div>
+</body>
+<script>
+    //会议签到列表选中行上色
+    var trs = document.getElementById('table').getElementsByTagName('tr');
+    window.onload = function () {
+        for (var i = 0; i < trs.length; i++) {
+            trs[i].onmousedown = function () {
+                tronmousedown(this);
+            }
+        }
+    }
+    function tronmousedown(obj) {
+        for (var o = 0; o < trs.length; o++) {
+            if (trs[o] == obj) {
+                trs[o].style.backgroundColor = '#DFEBF2';
+            }
+            else {
+                trs[o].style.backgroundColor = '';
+            }
+        }
+    }
+
+
+    //排他思想
+    var navblist = document.querySelector(".navblist")
+    // 获取 tab_list 中所有的 li
+    var lis = navblist.querySelectorAll("li")
+    var items = document.querySelectorAll(".item")
+    // for 循环绑定点击事件
+    for (var i = 0; i < lis.length; i++) {
+        // 设置索引号
+        lis[i].setAttribute('index', i);
+        lis[i].onclick = function () {
+            // 1. 选项卡模块
+            // 其余的 li 清楚 class 这个类
+            for (var j = 0; j < lis.length; j++) {
+                lis[j].className = ""
+            }
+            // 留下自己（点击了谁就留下了谁）
+            this.className = "applyMeeting"
+            // 2. 显示内容模块
+            var index = this.getAttribute("index")
+            //  console.log(index);
+            // 让其余的 item 这些 div 隐藏
+            for (var k = 0; k < items.length; k++) {
+                items[k].style.display = "none"
+            }
+            // 留下自己 让对应的 item 显示出来
+            items[index].style.display = "block"
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    body {
+
+        background-image: url("images/bg1.png");
+
+        background-position: center 0;
+
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+
+        background-size: cover;
+
+        -webkit-background-size: cover;
+
+        -o-background-size: cover;
+
+        -moz-background-size: cover;
+
+        -ms-background-size: cover;
+
+    }
+
+    .login {
+        margin-top: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 450px;
+        width: 500px;
+        padding: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .login input,
+    checkbox,
+    button {
+        margin-top: 2%;
+        margin-right: 10%;
+    }
+
+    .mycheckbox {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        height: 10px;
+    }
+</style>
+
+<body>
+    <form>
+        <div class="login">
+            <div class="mysign">
+                <div class="col-lg-10 text-center text-info">
+                    <h3>请登录</h3>
+                </div>
+
+                <div class="col-lg-10 mb-3">
+                    <input type="text" class="form-control" name="username" placeholder="请输入用户名" required autofocus
+                        style="color:green;" />
+                </div>
+
+                <div class="col-lg-10 mb-3">
+                    <input type="password" class="form-control" name="password" placeholder="请输入密码" required autofocus
+                        style="color:green;" />
+                </div>
+
+                <!-- 验证码 -->
+                <div class="col-lg-10 mb-3">
+                    <input type="text" class="form-control" placeholder="请输入验证码" style="color:green;">
+                    <img class="mt-2" height="50px" style="vertical-align:middle" src="/vertification-image"
+                        onclick="this.src='/vertification-iamge?r='+Math.random()">
+                </div>
+
+
+                <!-- 记住密码 -->
+                <div class="col-lg-10 mycheckbox checkbox text-white">
+                    <input type="checkbox">记住密码</input>
+                </div>
+
+                <div class="col-lg-10">
+                    <button type="button" class="btn btn-success col-lg-12 mt-2">登录</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script>
+    axios.defaults.baseURL = window.location.href
+    document.querySelector("input[type=submit]").onclick = function () {
+        let verf_code = document.querySelector("input").value
+        axios.post('/vertify', 'code=${verf_code}').then(r => {
+            console.log(r);
+            if (r.data) {
+                alert('验证码输入正确')
+            } else {
+                document.querySelector("img").click()
+            }
+        })
+    }
+</script>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户信息列表</title>
+</head>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="bootstrap.bundle.min.js"></script>
+<style>
+    body {
+
+        background-image: url("./bg1.png");
+
+        background-position: center 0;
+
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+
+        background-size: cover;
+
+        -webkit-background-size: cover;
+
+        -o-background-size: cover;
+
+        -moz-background-size: cover;
+
+        -ms-background-size: cover;
+
+    }
+</style>
+
+<body>
+    <div class="container col-9 mt-3 text-center">
+        <div class="input-group col-md-7" style="margin-top:0px">
+                <a href="#" class="btn btn-success mr-5" role="button">添加</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+        </div>
+        <table class="table table-success table-striped table-bordered caption-top" id="table">
+            <h4 class="text-center text-white mb-3 mt-5">用户信息列表</h4>
+            <thead>
+                <tr>
+                    <th scope="col text-md-center">ID</th>
+                    <th scope="col text-center">姓名</th>
+                    <th scope="col text-center">性别</th>
+                    <th scope="col text-center">照片</th>
+                    <th scope="col text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr th:each="user,stat:${user}">
+                    <td th:text="${user.id}">2001</td>
+                    <td th:text="${user.name}">张三</td>
+                    <td th:text="${user.gender}">男</td>
+                    <td th:text="${user.photo}">00</td>
+                    <td><a th:href="'javascript:deleteById('+${user.id}+')'">删除</a>
+                        <a th:href="${user.id}">修改</a>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link text-success" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link text-success" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link text-white" href="#">2</a></li>
+            <li class="page-item"><a class="page-link text-success" href="#">3</a></li>
+            <li class="page-item"><a class="page-link text-success" href="#">Next</a></li>
+          </ul>
+    </div>
+</body>
+<script>
+     var trs = document.getElementById('table').getElementsByTagName('tr');
+   window.onload = function(){
+    for( var i=0; i<trs.length; i++ ){
+     trs[i].onmousedown = function(){
+      tronmousedown(this);
+     }
+    }
+   }
+   function tronmousedown(obj){
+    for( var o=0; o<trs.length; o++ ){
+     if( trs[o] == obj ){
+      trs[o].style.backgroundColor = '#DFEBF2';
+     }
+     else{
+      trs[o].style.backgroundColor = '';
+     }
+    }
+   }
+</script>
+</html>
