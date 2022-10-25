@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', function(){ 
 var tab_list = document.querySelector('.tab_list')
 var lis = tab_list.querySelectorAll('li')
 var items1 = document.querySelectorAll('.item1')
@@ -35,5 +35,5 @@ for( var i = 0; i < lis1.length; i++) {
         items[index].style.display = 'block'
     }
 }
-}
+})
 
